@@ -1,35 +1,35 @@
-Tools for debug
-===============
+Herramientas para depuración
+============================
 
 
-Show info en shell
-------------------
+Mostrar información en shell
+----------------------------
 
-Only Linux
+Solo Linux
 
 .. code-block:: vbnet
 
     Sub Debug()
-        'Create service
+        'Crear servicio
         util = createUnoService("org.universolibre.EasyDev")
 
-        util.debug("Test debug")
+        util.debug("Prueba de depuración")
     End Sub
 
 .. image:: images/img002.png
     :width: 500px
     :align: center
 
-In Windows, you can open a new document Writer, save with name **debug.odt**
-and show info debug in this document.
+En Windows, puedes abrir y guardar un nuevo documento con el nombre **debug.odt**
+y mostrar la información de depuración en este documento.
 
 .. image:: images/img003.png
     :width: 500px
     :align: center
 
 
-Save info in file
------------------
+Guardar información en un archivo
+---------------------------------
 
 .. code-block:: vbnet
 
@@ -41,32 +41,33 @@ Save info in file
 
     End Sub
 
-Automatic add date and time. ::
+Automáticamente se agrega la fecha y hora. ::
 
     2015-10-28 20:56:35 - EasyDev - <uno_component.EasyDev object at 0x7f96caf34438>
     2015-10-28 20:56:41 - EasyDev - <uno_component.EasyDev object at 0x7f96caf34438>
 
 
-Special msgbox
---------------
+msgbox Especial
+---------------
 
-Show any data in msgbox like objects and arrays.
+Mostrar cualquier información en un cuadro de mensaje como objectos y matrices.
 
 .. code-block:: vbnet
 
     Sub MessageBox()
         util = createUnoService("org.universolibre.EasyDev")
 
-        'Show info in message box
-        util.msgbox("Debug data")
+        util.msgbox("Información de depuración")
 
-        'Show any data
-        data = "This is string"
+        'Mostrar cualquier dato
+        data = "Como texto"
         util.msgbox(data)
 
+        'Números'
         data = 12345
         util.msgbox(data)
 
+        'Matrices'
         data = Array("Uno", 2)
         util.msgbox(data)
 
@@ -74,20 +75,21 @@ Show any data in msgbox like objects and arrays.
     End Sub
 
 
-Call MRI
---------
+Llamar a MRI
+------------
 
-MRI is the best extension for introspeccion of objects for Apache OpenOffice
-and LibreOffice. `Download`_ and install.
+MRI es la mejor extensión para instrospección de objetos para Apache OpenOffice
+y LibreOffice. `Descargala`_ e instalala.
 
-Call from EasyDev.
+
+Llamala desde EasyDev.
 
 .. code-block:: vbnet
 
     Sub CallMRI()
         util = createUnoService("org.universolibre.EasyDev")
 
-        'MRI is a great extension
+        'MRI es una gran extensión.
         util.mri(util)
     End Sub
 
@@ -96,4 +98,4 @@ Call from EasyDev.
     :align: center
 
 
-.. _Download: http://extensions.openoffice.org/en/project/MRI
+.. _Descargala: http://extensions.openoffice.org/en/project/MRI

@@ -20,6 +20,7 @@ Contents:
    libocalc
    libowriter
    libobase
+   dialogs
 
 
 Indíces y tablas
