@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Send mail &mdash; EasyDev 2.0.0 documentation</title>
+    <title>Enviando correo &mdash; EasyDev 2.0.0 documentation</title>
     
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -25,7 +25,7 @@
     <script type="text/javascript" src="_static/doctools.js"></script>
     <link rel="top" title="EasyDev 2.0.0 documentation" href="index.html" />
     <link rel="next" title="Arrays" href="arrays.html" />
-    <link rel="prev" title="Tools" href="tools.html" />
+    <link rel="prev" title="Herramientas" href="tools.html" />
    
   
   <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9">
@@ -38,10 +38,10 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="send-mail">
-<h1>Send mail<a class="headerlink" href="#send-mail" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="send-mail-and-wait-result">
-<h2>Send mail and wait result<a class="headerlink" href="#send-mail-and-wait-result" title="Permalink to this headline">¶</a></h2>
+  <div class="section" id="enviando-correo">
+<h1>Enviando correo<a class="headerlink" href="#enviando-correo" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="enviar-un-correo-y-esperar-la-respuesta">
+<h2>Enviar un correo y esperar la respuesta<a class="headerlink" href="#enviar-un-correo-y-esperar-la-respuesta" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-vbnet"><div class="highlight"><pre><span class="k">Sub</span> <span class="nf">SendMail</span><span class="p">()</span>
     <span class="n">util</span> <span class="o">=</span> <span class="n">createUnoService</span><span class="p">(</span><span class="s">&quot;org.universolibre.EasyDev&quot;</span><span class="p">)</span>
 
@@ -67,16 +67,16 @@
     <span class="c">&#39;Send mail and wait response</span>
     <span class="n">result</span> <span class="o">=</span> <span class="n">util</span><span class="p">.</span><span class="n">sendMail</span><span class="p">(</span><span class="n">server</span><span class="p">,</span> <span class="n">message</span><span class="p">)</span>
     <span class="k">If</span> <span class="n">result</span> <span class="k">Then</span>
-        <span class="n">MsgBox</span> <span class="s">&quot;Send mail&quot;</span>
+        <span class="n">MsgBox</span> <span class="s">&quot;Correo enviado&quot;</span>
     <span class="k">Else</span>
-        <span class="n">MsgBox</span> <span class="s">&quot;Error send mail&quot;</span>
+        <span class="n">MsgBox</span> <span class="s">&quot;Error al enviar el correo&quot;</span>
     <span class="k">End</span> <span class="k">If</span>
 <span class="k">End</span> <span class="k">Sub</span>
 </pre></div>
 </div>
 </div>
-<div class="section" id="send-mail-and-not-wait">
-<h2>Send mail and not wait<a class="headerlink" href="#send-mail-and-not-wait" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="enviar-correo-y-no-esperar-respuesta">
+<h2>Enviar correo y no esperar respuesta<a class="headerlink" href="#enviar-correo-y-no-esperar-respuesta" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-vbnet"><div class="highlight"><pre><span class="k">Sub</span> <span class="nf">SendMailNoWait</span><span class="p">()</span>
     <span class="n">util</span> <span class="o">=</span> <span class="n">createUnoService</span><span class="p">(</span><span class="s">&quot;org.universolibre.EasyDev&quot;</span><span class="p">)</span>
 
@@ -100,7 +100,7 @@
     <span class="n">message</span><span class="p">.</span><span class="n">Subject</span> <span class="o">=</span> <span class="s">&quot;Email test&quot;</span>
     <span class="n">message</span><span class="p">.</span><span class="n">Body</span> <span class="o">=</span> <span class="n">body</span>
 
-    <span class="c">&#39;Send mail and NO wait response</span>
+    <span class="c">&#39;Enviar correo y no esperar respuesta</span>
     <span class="n">util</span><span class="p">.</span><span class="n">sendMail</span><span class="p">(</span><span class="n">server</span><span class="p">,</span> <span class="n">message</span><span class="p">)</span>
     <span class="n">MsgBox</span> <span class="s">&quot;Send mail&quot;</span>
 
@@ -108,8 +108,8 @@
 </pre></div>
 </div>
 </div>
-<div class="section" id="send-mail-with-cc-and-bcc">
-<h2>Send mail with CC and BCC<a class="headerlink" href="#send-mail-with-cc-and-bcc" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="enviar-correo-con-copia-cc-y-copia-oculta-bcc">
+<h2>Enviar correo con copia (CC) y copia oculta (BCC)<a class="headerlink" href="#enviar-correo-con-copia-cc-y-copia-oculta-bcc" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-vbnet"><div class="highlight"><pre><span class="k">Sub</span> <span class="nf">SendMailNoWaitAndCCBCC</span><span class="p">()</span>
     <span class="n">util</span> <span class="o">=</span> <span class="n">createUnoService</span><span class="p">(</span><span class="s">&quot;org.universolibre.EasyDev&quot;</span><span class="p">)</span>
 
@@ -135,7 +135,7 @@
     <span class="n">message</span><span class="p">.</span><span class="n">Cc</span> <span class="o">=</span> <span class="s">&quot;other1@correo.net,other2@correo.net&quot;</span>
     <span class="n">message</span><span class="p">.</span><span class="n">Bcc</span> <span class="o">=</span> <span class="s">&quot;other3@correo.net,other4@correo.net&quot;</span>
 
-    <span class="c">&#39;Send mail and NO wait response</span>
+    <span class="c">&#39;Enviar correo y no esperar respuesta</span>
     <span class="n">util</span><span class="p">.</span><span class="n">sendMail</span><span class="p">(</span><span class="n">server</span><span class="p">,</span> <span class="n">message</span><span class="p">)</span>
     <span class="n">MsgBox</span> <span class="s">&quot;Send mail&quot;</span>
 
@@ -143,8 +143,8 @@
 </pre></div>
 </div>
 </div>
-<div class="section" id="send-mail-with-attachment">
-<h2>Send mail with attachment<a class="headerlink" href="#send-mail-with-attachment" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="enviar-correo-con-archivos-anexos">
+<h2>Enviar correo con archivos anexos<a class="headerlink" href="#enviar-correo-con-archivos-anexos" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-vbnet"><div class="highlight"><pre><span class="k">Sub</span> <span class="nf">SendMailWithAttachment</span><span class="p">()</span>
     <span class="n">util</span> <span class="o">=</span> <span class="n">createUnoService</span><span class="p">(</span><span class="s">&quot;org.universolibre.EasyDev&quot;</span><span class="p">)</span>
 
@@ -171,7 +171,7 @@
     <span class="n">message</span><span class="p">.</span><span class="n">Body</span> <span class="o">=</span> <span class="n">body</span>
     <span class="n">message</span><span class="p">.</span><span class="n">Files</span> <span class="o">=</span> <span class="n">files</span>
 
-    <span class="c">&#39;Send mail and NO wait response</span>
+    <span class="c">&#39;Enviar correo y no esperar respuesta</span>
     <span class="n">util</span><span class="p">.</span><span class="n">sendMail</span><span class="p">(</span><span class="n">server</span><span class="p">,</span> <span class="n">message</span><span class="p">)</span>
     <span class="n">MsgBox</span> <span class="s">&quot;Send mail&quot;</span>
 
@@ -179,12 +179,13 @@
 </pre></div>
 </div>
 </div>
-<div class="section" id="send-mail-and-save">
-<h2>Send mail and save<a class="headerlink" href="#send-mail-and-save" title="Permalink to this headline">¶</a></h2>
-<p>If you use a path in Thunderbird, you can see mail in folder into Thunderbird</p>
+<div class="section" id="enviar-correo-y-guardar-mensaje">
+<h2>Enviar correo y guardar mensaje<a class="headerlink" href="#enviar-correo-y-guardar-mensaje" title="Permalink to this headline">¶</a></h2>
+<p>Si usas una ruta de Thunderbird, puedes ver el mensaje en una carpeta dentro
+de Thunderbird</p>
 <div class="admonition caution">
 <p class="first admonition-title">Caution</p>
-<p class="last">Use separate folder into tree folders in Thunderbird!</p>
+<p class="last">Siempre usa una carpeta separada dentro del árbol de carpetas de Thunderbird!</p>
 </div>
 <div class="highlight-vbnet"><div class="highlight"><pre><span class="k">Sub</span> <span class="nf">SendMailAndSave</span><span class="p">()</span>
     <span class="n">util</span> <span class="o">=</span> <span class="n">createUnoService</span><span class="p">(</span><span class="s">&quot;org.universolibre.EasyDev&quot;</span><span class="p">)</span>
@@ -214,7 +215,7 @@
     <span class="n">message</span><span class="p">.</span><span class="n">Files</span> <span class="o">=</span> <span class="n">files</span>
     <span class="n">message</span><span class="p">.</span><span class="n">Save</span> <span class="o">=</span> <span class="k">True</span>
 
-    <span class="c">&#39;Send mail and NO wait response</span>
+    <span class="c">&#39;Enviar correo y no esperar respuesta</span>
     <span class="n">util</span><span class="p">.</span><span class="n">sendMail</span><span class="p">(</span><span class="n">server</span><span class="p">,</span> <span class="n">message</span><span class="p">)</span>
     <span class="n">MsgBox</span> <span class="s">&quot;Send mail&quot;</span>
 
@@ -233,12 +234,12 @@
         <div class="sphinxsidebarwrapper">
   <h3><a href="index.html">Table Of Contents</a></h3>
   <ul>
-<li><a class="reference internal" href="#">Send mail</a><ul>
-<li><a class="reference internal" href="#send-mail-and-wait-result">Send mail and wait result</a></li>
-<li><a class="reference internal" href="#send-mail-and-not-wait">Send mail and not wait</a></li>
-<li><a class="reference internal" href="#send-mail-with-cc-and-bcc">Send mail with CC and BCC</a></li>
-<li><a class="reference internal" href="#send-mail-with-attachment">Send mail with attachment</a></li>
-<li><a class="reference internal" href="#send-mail-and-save">Send mail and save</a></li>
+<li><a class="reference internal" href="#">Enviando correo</a><ul>
+<li><a class="reference internal" href="#enviar-un-correo-y-esperar-la-respuesta">Enviar un correo y esperar la respuesta</a></li>
+<li><a class="reference internal" href="#enviar-correo-y-no-esperar-respuesta">Enviar correo y no esperar respuesta</a></li>
+<li><a class="reference internal" href="#enviar-correo-con-copia-cc-y-copia-oculta-bcc">Enviar correo con copia (CC) y copia oculta (BCC)</a></li>
+<li><a class="reference internal" href="#enviar-correo-con-archivos-anexos">Enviar correo con archivos anexos</a></li>
+<li><a class="reference internal" href="#enviar-correo-y-guardar-mensaje">Enviar correo y guardar mensaje</a></li>
 </ul>
 </li>
 </ul>
@@ -246,7 +247,7 @@
 <h3>Related Topics</h3>
 <ul>
   <li><a href="index.html">Documentation overview</a><ul>
-      <li>Previous: <a href="tools.html" title="previous chapter">Tools</a></li>
+      <li>Previous: <a href="tools.html" title="previous chapter">Herramientas</a></li>
       <li>Next: <a href="arrays.html" title="next chapter">Arrays</a></li>
   </ul></li>
 </ul>

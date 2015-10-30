@@ -1,8 +1,8 @@
-Send mail
-=========
+Enviando correo
+===============
 
-Send mail and wait result
--------------------------
+Enviar un correo y esperar la respuesta
+---------------------------------------
 
 .. code-block:: vbnet
 
@@ -31,15 +31,15 @@ Send mail and wait result
         'Send mail and wait response
         result = util.sendMail(server, message)
         If result Then
-            MsgBox "Send mail"
+            MsgBox "Correo enviado"
         Else
-            MsgBox "Error send mail"
+            MsgBox "Error al enviar el correo"
         End If
     End Sub
 
 
-Send mail and not wait
-----------------------
+Enviar correo y no esperar respuesta
+------------------------------------
 
 .. code-block:: vbnet
 
@@ -66,15 +66,15 @@ Send mail and not wait
         message.Subject = "Email test"
         message.Body = body
 
-        'Send mail and NO wait response
+        'Enviar correo y no esperar respuesta
         util.sendMail(server, message)
         MsgBox "Send mail"
 
     End Sub
 
 
-Send mail with CC and BCC
--------------------------
+Enviar correo con copia (CC) y copia oculta (BCC)
+-------------------------------------------------
 
 .. code-block:: vbnet
 
@@ -103,15 +103,15 @@ Send mail with CC and BCC
         message.Cc = "other1@correo.net,other2@correo.net"
         message.Bcc = "other3@correo.net,other4@correo.net"
 
-        'Send mail and NO wait response
+        'Enviar correo y no esperar respuesta
         util.sendMail(server, message)
         MsgBox "Send mail"
 
     End Sub
 
 
-Send mail with attachment
--------------------------
+Enviar correo con archivos anexos
+---------------------------------
 
 .. code-block:: vbnet
 
@@ -141,20 +141,21 @@ Send mail with attachment
         message.Body = body
         message.Files = files
 
-        'Send mail and NO wait response
+        'Enviar correo y no esperar respuesta
         util.sendMail(server, message)
         MsgBox "Send mail"
 
     End Sub
 
 
-Send mail and save
-------------------
+Enviar correo y guardar mensaje
+-------------------------------
 
-If you use a path in Thunderbird, you can see mail in folder into Thunderbird
+Si usas una ruta de Thunderbird, puedes ver el mensaje en una carpeta dentro
+de Thunderbird
 
 .. CAUTION::
-   Use separate folder into tree folders in Thunderbird!
+   Siempre usa una carpeta separada dentro del árbol de carpetas de Thunderbird!
 
 .. code-block:: vbnet
 
@@ -186,7 +187,7 @@ If you use a path in Thunderbird, you can see mail in folder into Thunderbird
         message.Files = files
         message.Save = True
 
-        'Send mail and NO wait response
+        'Enviar correo y no esperar respuesta
         util.sendMail(server, message)
         MsgBox "Send mail"
 
