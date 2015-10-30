@@ -1,97 +1,96 @@
-Tools
-=====
+Herramientas
+============
 
 
-Show info PC
-------------
+Mostrar información del PC
+--------------------------
 
 .. code-block:: vbnet
 
     Sub ShowInfoPC()
         util = createUnoService("org.universolibre.EasyDev")
 
-        'Operator System
+        'Sistema operativo
         util.msgbox(util.OS)
 
-        'App Name
+        'Nombre de la aplicación
         util.msgbox(util.APP_NAME)
 
-        'App Version
+        'Versión de la aplicación
         util.msgbox(util.APP_VERSION)
 
-        'App Language
+        'Lenguaje
         util.msgbox(util.LANGUAGE)
 
-        'Size screen
+        'Tamaño de la pantalla
         util.msgbox(util.getSizeScreen())
 
         ' https://docs.python.org/3.3/library/platform.html
-        ' Get info PC:
-        ' name user,
-        ' name pc
-        ' system/OS name,
-        ' machine type,
-        ' Returns the (real) processor name
-        ' string identifying platform with as much useful information as possible,
+        ' nombre de usuario,
+        ' nombre del pc
+        ' nombre del SO,
+        ' tipo de maquina,
+        ' nombre del procesador
+        ' Cadena de indentificación de la plataforma con la mayor cantidad de información posible
         util.msgbox(util.getInfoPC())
     End Sub
 
 
-Make question
--------------
+Hacer una pregunta
+------------------
 
 .. code-block:: vbnet
 
-    Sub Question()
+    Sub Pregunta()
         util = createUnoService("org.universolibre.EasyDev")
 
-        title = "My App"
-        message = "Is easy Python?"
-        res = util.question(title, message)
+        titulo = "Mi programa"
+        mensage = "¿Es fácil Python?"
+        res = util.question(titulo, mensaje)
 
-        'If Yes return True, else return False
+        'Si pulsa SI, devuelve verdadero (True)
         util.msgbox(res)
 
     End Sub
 
 
-Render string
---------------
+Reemplazar cadenas
+------------------
 
-Render text and replace arguments.
+Reemplazar una cadena con argumentos
 
 .. code-block:: vbnet
 
     Sub RenderString()
         util = createUnoService("org.universolibre.EasyDev")
 
-        'Used NamedValue
-        message = "Hello $data with $language, from Basic 1!!"
+        'Puedes usar una estructura NamedValue
+        message = "Hola $data con $idioma, desde Basic 1!!"
         Dim data1(1) As New com.sun.star.beans.NamedValue
 
         data1(0).Name = "data"
-        data1(0).Value = "World"
-        data1(1).Name = "language"
+        data1(0).Value = "Mundo"
+        data1(1).Name = "idioma"
         data1(1).Value = "Python"
         message = util.render(message, data1)
         util.msgbox(message)
 
-        'Used PropertyValue
-        message = "Hello $data with $language, from Basic 2!!"
+        'Usando estructura PropertyValue
+        message = "Hola $data con $idioma, desde Basic 2!!"
         Dim data2(1) As New com.sun.star.beans.PropertyValue
 
         data2(0).Name = "data"
-        data2(0).Value = "World"
-        data2(1).Name = "language"
+        data2(0).Value = "Mundo"
+        data2(1).Name = "idioma"
         data2(1).Value = "Python"
         message = util.render(message, data2)
         util.msgbox(message)
 
-        'Used Arrays
-        message = "Hello $data with $language, from Basic 3!!"
+        'Usando matrices
+        message = "Hola $data con $idioma, desde Basic 3!!"
         data = Array( _
-            Array("data", "World"), _
-            Array("language", "Python") _
+            Array("data", "Mundo"), _
+            Array("idioma", "Python") _
         )
         message = util.render(message, data2)
         util.msgbox(message)
@@ -99,10 +98,10 @@ Render text and replace arguments.
     End Sub
 
 
-Format
-------
+Formato
+-------
 
-Look more info and examples `here`_.
+Más información y ejemplos `aquí`_.
 
 .. code-block:: vbnet
 
@@ -145,10 +144,10 @@ Look more info and examples `here`_.
     End Sub
 
 
-Files and folders
------------------
+Archivos y directorios
+----------------------
 
-Return de path name in config. Look `XPathSettings`_.
+Obtener una ruta desde configuración. Más información: `XPathSettings`_.
 
 .. code-block:: vbnet
 
@@ -157,7 +156,11 @@ Return de path name in config. Look `XPathSettings`_.
     path = util.getPath("Work")
     util.msgbox(path)
 
-Get info from path: path base, file name, file name without extension, extension
+Obtener información de una ruta:
+    #. ruta base,
+    #. nombre del archivo,
+    #. nombre del archivo sin extensión,
+    #. extensión del archivo.
 
 .. code-block:: vbnet
 
@@ -165,7 +168,7 @@ Get info from path: path base, file name, file name without extension, extension
     util.msgbox(data)
 
 
-Join paths
+Unir rutas
 
 .. code-block:: vbnet
 
@@ -174,32 +177,32 @@ Join paths
     path = util.pathJoin(Array("/home/USER/Documents", "..", "Picture"))
     util.msgbox(path)
 
-Select folder, default path documents user
+Seleccionar directorio, de forma predeterminada, muestra la ruta de documentos del usuario
 
 .. code-block:: vbnet
 
     folder = util.getFolder("")
     util.msgbox(folder)
 
-    'With other init folder
+    'Se puede establecer otra ruta de inicio
     folder = util.getFolder("/home/USER")
     util.msgbox(folder)
 
-Select one file without filters
+Seleccionar un solo archivo sin filtros.
 
 .. code-block:: vbnet
 
     file = util.getSelectedFiles("", False, Array())
     util.msgbox(file)
 
-Select multiple files
+Seleccionar multiples archivos sin filtros.
 
 .. code-block:: vbnet
 
     files = util.getSelectedFiles("", True, Array())
     util.msgbox(files)
 
-Select multiple files with filter
+Seleccionar multiples archivos con un filtro.
 
 .. code-block:: vbnet
 
@@ -211,14 +214,14 @@ Select multiple files with filter
     files = util.getSelectedFiles("", True, filters)
     util.msgbox(files)
 
-Get all files recursive
+Obtener todos los archivos de un directorio de forma recursiva.
 
 .. code-block:: vbnet
 
     files = util.getFiles("/home/USER/Pictures", "")
     util.msgbox(files)
 
-Get all files with filter extension
+Obtener todos los archivos de un directorio de forma recursiva con un filtro.
 
 .. code-block:: vbnet
 
@@ -227,21 +230,21 @@ Get all files with filter extension
     files = util.getFiles("/home/USER/Pictures", "png")
     util.msgbox(files)
 
-Open file, read all content
+Abrir un archivo y leer su contenido.
 
 .. code-block:: vbnet
 
     data = util.fileOpen("/home/USER/log.txt", "r", False)
     util.msgbox(data)
 
-Open file, get lines in array
+Abrir un archivo regresando cada línea en una matriz.
 
 .. code-block:: vbnet
 
     data = util.fileOpen("/home/USER/log.txt", "r", True)
     util.msgbox(data)
 
-Save data in new file
+Guardar información en un nuevo archivo.
 
 .. code-block:: vbnet
 
@@ -251,7 +254,7 @@ Save data in new file
     data = util.fileOpen("/home/mau/test.txt", "r")
     util.msgbox(data)
 
-Save data in append file
+Agregar información a un archivo
 
 .. code-block:: vbnet
 
@@ -262,27 +265,28 @@ Save data in append file
     util.msgbox(data)
 
 
-Execute
--------
+Ejecutar
+--------
 
-Execute command and wait response
+Ejecutar un comando y esperar la respuesta.
 
 .. code-block:: vbnet
 
     res = util.execute(Array("ls","-la"), True)
     util.msgbox(res)
 
-Execute command and not wait
+Ejecutar un comando y **no** esperar respuesta.
 
 .. code-block:: vbnet
 
     util.execute(Array("gnome-calculator"), False)
 
 
-Config
-------
+Configuración
+-------------
 
-Save value in config, save is persistente
+Guadar un valor en el registro de configuración de LibreOffice, el valor se guarda
+de forma persistente.
 
 .. code-block:: vbnet
 
@@ -291,7 +295,7 @@ Save value in config, save is persistente
     value = util.getConfig("DefaultMail")
     util.msgbox(value)
 
-Is posible save arrays
+Es posible guardar matrices.
 
 .. code-block:: vbnet
 
@@ -300,17 +304,17 @@ Is posible save arrays
     util.msgbox(value)
 
 
-Clipboard
----------
+Portapapeles
+------------
 
-Get text from clipboard
+Obtener texto del portapapeles.
 
 .. code-block:: vbnet
 
     value = util.getClipboard()
     util.msgbox(value)
 
-Send text to clipboard
+Enviar texto al portapapeles.
 
 .. code-block:: vbnet
 
@@ -320,10 +324,10 @@ Send text to clipboard
     util.msgbox(value)
 
 
-Unix time
----------
+Tiempo Unix
+-----------
 
-Look `<https://en.wikipedia.org/wiki/Unix_time>`_
+Más información: `<https://en.wikipedia.org/wiki/Unix_time>`_
 
 .. code-block:: vbnet
 
@@ -331,15 +335,16 @@ Look `<https://en.wikipedia.org/wiki/Unix_time>`_
     util.msgbox(epoch)
 
 
-Call macros
------------
+Llamar macros
+-------------
 
-Look: `Scripting Framework <https://wiki.openoffice.org/wiki/Documentation/DevGuide/Scripting/Scripting_Framework_URI_Specification>`_
+Más información: `Scripting Framework <https://wiki.openoffice.org/wiki/Documentation/DevGuide/Scripting/Scripting_Framework_URI_Specification>`_
 
-Save next macro in:
+Guarda la siguiente macro en:
 
 ``/home/USER/.config/libreoffice/4/user/Scripts/python/mymacros.py``
 ::
+
     import uno
     import time
 
@@ -348,7 +353,7 @@ Save next macro in:
         time.sleep(3)
         return
 
-Call macro in Python (is default), wait end
+Llamar a una macro Python (predeterminado) y esperar la respuesta.
 
 .. code-block:: vbnet
 
@@ -362,7 +367,7 @@ Call macro in Python (is default), wait end
     :width: 400px
     :align: center
 
-Call macro in Python, and NOT wait end
+Llamar a una macro Python y **no** esperar la respuesta.
 
 .. code-block:: vbnet
 
@@ -373,7 +378,7 @@ Call macro in Python, and NOT wait end
     cell = ThisComponent.CurrentSelection
     util.callMacro(macro, Array(cell))
 
-Call macro in Basic
+Llamar a una macro en Basic
 
 .. code-block:: vbnet
 
@@ -393,10 +398,11 @@ Call macro in Basic
 Timer
 -----
 
-Save next macro in:
+Guarda la siguiente macro en:
 
 ``/home/USER/.config/libreoffice/4/user/Scripts/python/mymacros.py``
 ::
+
     import uno
     import time
 
@@ -404,9 +410,10 @@ Save next macro in:
         cell.setString(time.strftime('%c'))
         return
 
-timer(NAME_TIMER, SECONDS_WAIT, MACRO, ARGUMENTS)
+``timer(NOMBRE_TIMER, SEGUNDOS, MACRO, ARGUMENTOS)``
 
-NAME_TIMER is import for stop timer. Timer always execute in other thread.
+El nombre del timer es muy importante para que lo puedas detener. El timer
+siempre se ejecuta en otro hilo de proceso.
 
 .. code-block:: vbnet
 
@@ -421,7 +428,7 @@ NAME_TIMER is import for stop timer. Timer always execute in other thread.
     'Timer name "time" and wait one second
     util.timer("time", 1, macro, Array(cell))
 
-Stop timer for name
+Detener un timer por su nombre
 
 .. code-block:: vbnet
 
@@ -431,16 +438,16 @@ Stop timer for name
     End Sub
 
 
-Export CSV
-----------
+Exportar a CSV
+--------------
 
-Set range with data and select.
+Establece un rango con datos y seleccionalo.
 
 .. image:: images/img007.png
     :width: 400px
     :align: center
 
-and export
+y esportarlo.
 
 .. code-block:: vbnet
 
@@ -454,7 +461,7 @@ and export
 
     util.exportCSV(path, data, options)
 
-Change options for export, look: `<https://docs.python.org/3.3/library/csv.html#csv.writer>`_
+Cambiar opciones de exportación, más información en: `<https://docs.python.org/3.3/library/csv.html#csv.writer>`_
 
 .. code-block:: vbnet
 
@@ -471,9 +478,6 @@ Change options for export, look: `<https://docs.python.org/3.3/library/csv.html#
     util.exportCSV(path, data, options)
 
 
-
-
-
 .. _XPathSettings: http://api.libreoffice.org/docs/idl/ref/interfacecom_1_1sun_1_1star_1_1util_1_1XPathSettings.html
-.. _here: https://pyformat.info/
-.. _Download: http://extensions.openoffice.org/en/project/MRI
+.. _aquí: https://pyformat.info/
+
