@@ -1,8 +1,10 @@
-Data Base
-=========
+Bases de datos
+==============
 
 ODBC
 ----
+
+Conectar a una base de datos ODBC
 
 .. code-block:: vbnet
 

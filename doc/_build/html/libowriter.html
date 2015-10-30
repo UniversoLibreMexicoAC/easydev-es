@@ -25,7 +25,7 @@
     <script type="text/javascript" src="_static/doctools.js"></script>
     <script type="text/javascript" src="_static/translations.js"></script>
     <link rel="top" title="documentación de EasyDev - 2.0.0" href="index.html" />
-    <link rel="next" title="Data Base" href="libobase.html" />
+    <link rel="next" title="Bases de datos" href="libobase.html" />
     <link rel="prev" title="Calc" href="libocalc.html" />
    
   
@@ -41,9 +41,9 @@
             
   <div class="section" id="writer">
 <h1>Writer<a class="headerlink" href="#writer" title="Enlazar permanentemente con este título">¶</a></h1>
-<div class="section" id="paragraphs">
-<h2>Paragraphs<a class="headerlink" href="#paragraphs" title="Enlazar permanentemente con este título">¶</a></h2>
-<p>Get all paragraphs in document.</p>
+<div class="section" id="parrafos">
+<h2>Parrafos<a class="headerlink" href="#parrafos" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Obtener todos los parrafos de un documento, incluyendo los vacíos.</p>
 <div class="highlight-vbnet"><div class="highlight"><pre><span class="k">Sub</span> <span class="nf">GetParagraps</span><span class="p">()</span>
     <span class="n">util</span> <span class="o">=</span> <span class="n">createUnoService</span><span class="p">(</span><span class="s">&quot;org.universolibre.EasyDev&quot;</span><span class="p">)</span>
 
@@ -57,7 +57,7 @@
 <span class="k">End</span> <span class="k">Sub</span>
 </pre></div>
 </div>
-<p>Get paragraphs with text</p>
+<p>Obtener todos los parrafos de un documento, excluyendo los vacíos.</p>
 <div class="highlight-vbnet"><div class="highlight"><pre><span class="n">paragraphs</span> <span class="o">=</span> <span class="n">util</span><span class="p">.</span><span class="n">getParagraphs</span><span class="p">(</span><span class="n">doc</span><span class="p">,</span> <span class="k">False</span><span class="p">)</span>
 <span class="n">util</span><span class="p">.</span><span class="n">msgbox</span><span class="p">(</span><span class="n">util</span><span class="p">.</span><span class="n">len</span><span class="p">(</span><span class="n">paragraphs</span><span class="p">))</span>
 </pre></div>
@@ -74,7 +74,7 @@
   <h3><a href="index.html">Tabla de Contenidos</a></h3>
   <ul>
 <li><a class="reference internal" href="#">Writer</a><ul>
-<li><a class="reference internal" href="#paragraphs">Paragraphs</a></li>
+<li><a class="reference internal" href="#parrafos">Parrafos</a></li>
 </ul>
 </li>
 </ul>
@@ -83,7 +83,7 @@
 <ul>
   <li><a href="index.html">Documentation overview</a><ul>
       <li>Previous: <a href="libocalc.html" title="capítulo anterior">Calc</a></li>
-      <li>Next: <a href="libobase.html" title="próximo capítulo">Data Base</a></li>
+      <li>Next: <a href="libobase.html" title="próximo capítulo">Bases de datos</a></li>
   </ul></li>
 </ul>
 </div>

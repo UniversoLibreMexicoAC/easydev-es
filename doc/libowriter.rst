@@ -1,10 +1,10 @@
 Writer
 ======
 
-Paragraphs
-----------
+Parrafos
+--------
 
-Get all paragraphs in document.
+Obtener todos los parrafos de un documento, incluyendo los vacíos.
 
 .. code-block:: vbnet
 
@@ -20,7 +20,7 @@ Get all paragraphs in document.
 
     End Sub
 
-Get paragraphs with text
+Obtener todos los parrafos de un documento, excluyendo los vacíos.
 
 .. code-block:: vbnet
 
