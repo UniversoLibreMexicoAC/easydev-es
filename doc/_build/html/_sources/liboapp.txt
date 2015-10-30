@@ -1,10 +1,10 @@
-Documents
-=========
+Documentos
+==========
 
-New
----
+Nuevo
+-----
 
-Look: `<http://www.openoffice.org/api/docs/common/ref/com/sun/star/frame/XComponentLoader.html>`_
+Más información: `Component Loader`_
 
 .. code-block:: vbnet
 
@@ -17,13 +17,13 @@ Look: `<http://www.openoffice.org/api/docs/common/ref/com/sun/star/frame/XCompon
 
     End Sub
 
-Other values: swriter, simpress, sdraw, smath
+Otros posibles valores: swriter, simpress, sdraw, smath
 
 .. code-block:: vbnet
 
         doc = util.newDoc("sdraw")
 
-For Base document.
+Para documentos de Base.
 
 .. code-block:: vbnet
 
@@ -31,20 +31,20 @@ For Base document.
     db = util.newDB(path_db)
 
 
-Get doc
--------
+Obtener documento
+-----------------
 
-Current
+Actual
 
 .. IMPORTANT::
-   Current doc can be IDE
+   El documento actual puede ser el IDE Basic
 
 .. code-block:: vbnet
 
     doc1 = util.getDoc("")
     MsgBox doc1.Title
 
-Get doc by title, if not found, doc is Empty
+Obtener documento por título, si no se encuentra, regresa Vacio
 
 .. code-block:: vbnet
 
@@ -52,10 +52,10 @@ Get doc by title, if not found, doc is Empty
     util.msgbox(doc2)
 
 
-Get type
---------
+Tipo de documento
+-----------------
 
-Values return: calc, writer, impress, draw, math, base, ide
+Valores de retorno: calc, writer, impress, draw, math, base, ide
 
 .. code-block:: vbnet
 
@@ -66,10 +66,10 @@ Values return: calc, writer, impress, draw, math, base, ide
     MsgBox util.getTypeDoc(doc2)
 
 
-Get documents
--------------
+Obtener documentos
+------------------
 
-Get all open documents
+Obtener todos los documentos abiertos.
 
 .. code-block:: vbnet
 
@@ -77,15 +77,15 @@ Get all open documents
     MsgBox util.format("{} Open documents", util.len(docs))
 
 
-Open
-----
+Abrir
+-----
 
-More info and options:
+Más información y opciones:
 
-    * `Component Loader <http://api.libreoffice.org/docs/idl/ref/interfacecom_1_1sun_1_1star_1_1frame_1_1XComponentLoader.html>`_
+    * `Component Loader`_
     * `Media Descriptor <http://api.libreoffice.org/docs/idl/ref/servicecom_1_1sun_1_1star_1_1document_1_1MediaDescriptor.html>`_
 
-Open by path document
+Abrir documento por ruta
 
 .. code-block:: vbnet
 
@@ -96,7 +96,7 @@ Open by path document
     options = Array()
     doc = util.openDoc(path, options)
 
-Open like template
+Abrir como una plantilla.
 
 .. code-block:: vbnet
 
@@ -105,7 +105,7 @@ Open like template
     path = "/home/USER/Plantilla.ods"
     doc = util.openDoc(path, options1)
 
-Open hidden
+Abrir oculto.
 
 .. code-block:: vbnet
 
@@ -117,10 +117,10 @@ Open hidden
     doc.dispose()
 
 
-Active
-------
+Activar
+-------
 
-Send focus to document
+Enviar el foco a un documento.
 
 .. code-block:: vbnet
 
@@ -130,10 +130,10 @@ Send focus to document
     util.setFocus(doc1)
 
 
-Status bar
-----------
+Barra de estado
+---------------
 
-Set text and show progress bar
+Establecer el texto y mostrar una barra de progreso.
 
 .. code-block:: vbnet
 
@@ -153,14 +153,14 @@ Set text and show progress bar
     sb.end()
 
 
-Export PDF
-----------
+Exportar a PDF
+--------------
 
-All options in `PDF Export <http://wiki.services.openoffice.org/wiki/API/Tutorials/PDF_export>`_ in wiki.
+Todas las opciones en: `PDF Export <http://wiki.services.openoffice.org/wiki/API/Tutorials/PDF_export>`_ in wiki.
 
-If export is correct, return path save PDF
+Si la exportación es correcta, regresa la ruta del PDF
 
-Export current doc in the same folder and same name
+Exportar el documento actual en el mismo directorio y mismo nombre del documento.
 
 .. code-block:: vbnet
 
@@ -168,21 +168,21 @@ Export current doc in the same folder and same name
     path = util.exportPDF(doc, "", Array())
     MsgBox util.format("PDF export in: {}", path)
 
-For save in other folder and same name
+Exportar en otro directorio con el mismo nombre del documento.
 
 .. code-block:: vbnet
 
     path_save = "/home/USER/OTHER_FOLDER"
     path_pdf = util.exportPDF(doc, path_save, Array())
 
-For save in other folder and other name
+Exportar en otro directorio y otro nombre de archivo.
 
 .. code-block:: vbnet
 
     path_save = "/home/USER/OTHER_FOLDER/NAME.pdf"
     path_pdf = util.exportPDF(doc, path_save, Array())
 
-Export with options
+Exportar con opciones.
 
 .. code-block:: vbnet
 
@@ -193,3 +193,6 @@ Export with options
     options(0).Value = "2"
     path = util.exportPDF(doc, "", options)
     MsgBox util.format("PDF export in: {}", path)
+
+
+.. _Component Loader: http://www.openoffice.org/api/docs/common/ref/com/sun/star/frame/XComponentLoader.html

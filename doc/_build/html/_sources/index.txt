@@ -6,7 +6,7 @@
 Bienvenido a la documentación de EasyDev!
 =========================================
 
-Contents:
+Contenido:
 
 .. toctree::
    :maxdepth: 2
