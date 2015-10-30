@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Herramientas &mdash; EasyDev 2.0.0 documentation</title>
+    <title>Herramientas &mdash; documentación de EasyDev - 2.0.0</title>
     
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -23,8 +23,9 @@
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <link rel="top" title="EasyDev 2.0.0 documentation" href="index.html" />
-    <link rel="next" title="Send mail" href="email.html" />
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <link rel="top" title="documentación de EasyDev - 2.0.0" href="index.html" />
+    <link rel="next" title="Enviando correo" href="email.html" />
     <link rel="prev" title="Herramientas para depuración" href="debug.html" />
    
   
@@ -39,9 +40,9 @@
           <div class="body" role="main">
             
   <div class="section" id="herramientas">
-<h1>Herramientas<a class="headerlink" href="#herramientas" title="Permalink to this headline">¶</a></h1>
+<h1>Herramientas<a class="headerlink" href="#herramientas" title="Enlazar permanentemente con este título">¶</a></h1>
 <div class="section" id="mostrar-informacion-del-pc">
-<h2>Mostrar información del PC<a class="headerlink" href="#mostrar-informacion-del-pc" title="Permalink to this headline">¶</a></h2>
+<h2>Mostrar información del PC<a class="headerlink" href="#mostrar-informacion-del-pc" title="Enlazar permanentemente con este título">¶</a></h2>
 <div class="highlight-vbnet"><div class="highlight"><pre><span class="k">Sub</span> <span class="nf">ShowInfoPC</span><span class="p">()</span>
     <span class="n">util</span> <span class="o">=</span> <span class="n">createUnoService</span><span class="p">(</span><span class="s">&quot;org.universolibre.EasyDev&quot;</span><span class="p">)</span>
 
@@ -73,7 +74,7 @@
 </div>
 </div>
 <div class="section" id="hacer-una-pregunta">
-<h2>Hacer una pregunta<a class="headerlink" href="#hacer-una-pregunta" title="Permalink to this headline">¶</a></h2>
+<h2>Hacer una pregunta<a class="headerlink" href="#hacer-una-pregunta" title="Enlazar permanentemente con este título">¶</a></h2>
 <div class="highlight-vbnet"><div class="highlight"><pre><span class="k">Sub</span> <span class="nf">Pregunta</span><span class="p">()</span>
     <span class="n">util</span> <span class="o">=</span> <span class="n">createUnoService</span><span class="p">(</span><span class="s">&quot;org.universolibre.EasyDev&quot;</span><span class="p">)</span>
 
@@ -89,7 +90,7 @@
 </div>
 </div>
 <div class="section" id="reemplazar-cadenas">
-<h2>Reemplazar cadenas<a class="headerlink" href="#reemplazar-cadenas" title="Permalink to this headline">¶</a></h2>
+<h2>Reemplazar cadenas<a class="headerlink" href="#reemplazar-cadenas" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>Reemplazar una cadena con argumentos</p>
 <div class="highlight-vbnet"><div class="highlight"><pre><span class="k">Sub</span> <span class="nf">RenderString</span><span class="p">()</span>
     <span class="n">util</span> <span class="o">=</span> <span class="n">createUnoService</span><span class="p">(</span><span class="s">&quot;org.universolibre.EasyDev&quot;</span><span class="p">)</span>
@@ -130,7 +131,7 @@
 </div>
 </div>
 <div class="section" id="formato">
-<h2>Formato<a class="headerlink" href="#formato" title="Permalink to this headline">¶</a></h2>
+<h2>Formato<a class="headerlink" href="#formato" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>Más información y ejemplos <a class="reference external" href="https://pyformat.info/">aquí</a>.</p>
 <div class="highlight-vbnet"><div class="highlight"><pre><span class="k">Sub</span> <span class="nf">FormatData</span><span class="p">()</span>
     <span class="n">util</span> <span class="o">=</span> <span class="n">createUnoService</span><span class="p">(</span><span class="s">&quot;org.universolibre.EasyDev&quot;</span><span class="p">)</span>
@@ -173,7 +174,7 @@
 </div>
 </div>
 <div class="section" id="archivos-y-directorios">
-<h2>Archivos y directorios<a class="headerlink" href="#archivos-y-directorios" title="Permalink to this headline">¶</a></h2>
+<h2>Archivos y directorios<a class="headerlink" href="#archivos-y-directorios" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>Obtener una ruta desde configuración. Más información: <a class="reference external" href="http://api.libreoffice.org/docs/idl/ref/interfacecom_1_1sun_1_1star_1_1util_1_1XPathSettings.html">XPathSettings</a>.</p>
 <div class="highlight-vbnet"><div class="highlight"><pre><span class="n">path</span> <span class="o">=</span> <span class="n">util</span><span class="p">.</span><span class="n">getPath</span><span class="p">(</span><span class="s">&quot;Temp&quot;</span><span class="p">)</span>
 <span class="n">util</span><span class="p">.</span><span class="n">msgbox</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
@@ -271,7 +272,7 @@
 </div>
 </div>
 <div class="section" id="ejecutar">
-<h2>Ejecutar<a class="headerlink" href="#ejecutar" title="Permalink to this headline">¶</a></h2>
+<h2>Ejecutar<a class="headerlink" href="#ejecutar" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>Ejecutar un comando y esperar la respuesta.</p>
 <div class="highlight-vbnet"><div class="highlight"><pre><span class="n">res</span> <span class="o">=</span> <span class="n">util</span><span class="p">.</span><span class="n">execute</span><span class="p">(</span><span class="n">Array</span><span class="p">(</span><span class="s">&quot;ls&quot;</span><span class="p">,</span><span class="s">&quot;-la&quot;</span><span class="p">),</span> <span class="k">True</span><span class="p">)</span>
 <span class="n">util</span><span class="p">.</span><span class="n">msgbox</span><span class="p">(</span><span class="n">res</span><span class="p">)</span>
@@ -283,7 +284,7 @@
 </div>
 </div>
 <div class="section" id="configuracion">
-<h2>Configuración<a class="headerlink" href="#configuracion" title="Permalink to this headline">¶</a></h2>
+<h2>Configuración<a class="headerlink" href="#configuracion" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>Guadar un valor en el registro de configuración de LibreOffice, el valor se guarda
 de forma persistente.</p>
 <div class="highlight-vbnet"><div class="highlight"><pre><span class="n">util</span><span class="p">.</span><span class="n">setConfig</span><span class="p">(</span><span class="s">&quot;DefaultMail&quot;</span><span class="p">,</span> <span class="s">&quot;test@correolibre.net&quot;</span><span class="p">)</span>
@@ -300,7 +301,7 @@ de forma persistente.</p>
 </div>
 </div>
 <div class="section" id="portapapeles">
-<h2>Portapapeles<a class="headerlink" href="#portapapeles" title="Permalink to this headline">¶</a></h2>
+<h2>Portapapeles<a class="headerlink" href="#portapapeles" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>Obtener texto del portapapeles.</p>
 <div class="highlight-vbnet"><div class="highlight"><pre><span class="n">value</span> <span class="o">=</span> <span class="n">util</span><span class="p">.</span><span class="n">getClipboard</span><span class="p">()</span>
 <span class="n">util</span><span class="p">.</span><span class="n">msgbox</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
@@ -315,7 +316,7 @@ de forma persistente.</p>
 </div>
 </div>
 <div class="section" id="tiempo-unix">
-<h2>Tiempo Unix<a class="headerlink" href="#tiempo-unix" title="Permalink to this headline">¶</a></h2>
+<h2>Tiempo Unix<a class="headerlink" href="#tiempo-unix" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>Más información: <a class="reference external" href="https://en.wikipedia.org/wiki/Unix_time">https://en.wikipedia.org/wiki/Unix_time</a></p>
 <div class="highlight-vbnet"><div class="highlight"><pre><span class="n">epoch</span> <span class="o">=</span> <span class="n">util</span><span class="p">.</span><span class="n">getEpoch</span><span class="p">()</span>
 <span class="n">util</span><span class="p">.</span><span class="n">msgbox</span><span class="p">(</span><span class="n">epoch</span><span class="p">)</span>
@@ -323,7 +324,7 @@ de forma persistente.</p>
 </div>
 </div>
 <div class="section" id="llamar-macros">
-<h2>Llamar macros<a class="headerlink" href="#llamar-macros" title="Permalink to this headline">¶</a></h2>
+<h2>Llamar macros<a class="headerlink" href="#llamar-macros" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>Más información: <a class="reference external" href="https://wiki.openoffice.org/wiki/Documentation/DevGuide/Scripting/Scripting_Framework_URI_Specification">Scripting Framework</a></p>
 <p>Guarda la siguiente macro en:</p>
 <p><code class="docutils literal"><span class="pre">/home/USER/.config/libreoffice/4/user/Scripts/python/mymacros.py</span></code></p>
@@ -367,7 +368,7 @@ de forma persistente.</p>
 <a class="reference internal image-reference" href="_images/img006.png"><img alt="_images/img006.png" class="align-center" src="_images/img006.png" style="width: 150px;" /></a>
 </div>
 <div class="section" id="timer">
-<h2>Timer<a class="headerlink" href="#timer" title="Permalink to this headline">¶</a></h2>
+<h2>Timer<a class="headerlink" href="#timer" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>Guarda la siguiente macro en:</p>
 <p><code class="docutils literal"><span class="pre">/home/USER/.config/libreoffice/4/user/Scripts/python/mymacros.py</span></code></p>
 <div class="highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">uno</span>
@@ -402,7 +403,7 @@ siempre se ejecuta en otro hilo de proceso.</p>
 </div>
 </div>
 <div class="section" id="exportar-a-csv">
-<h2>Exportar a CSV<a class="headerlink" href="#exportar-a-csv" title="Permalink to this headline">¶</a></h2>
+<h2>Exportar a CSV<a class="headerlink" href="#exportar-a-csv" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>Establece un rango con datos y seleccionalo.</p>
 <a class="reference internal image-reference" href="_images/img007.png"><img alt="_images/img007.png" class="align-center" src="_images/img007.png" style="width: 400px;" /></a>
 <p>y esportarlo.</p>
@@ -440,7 +441,7 @@ siempre se ejecuta en otro hilo de proceso.</p>
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="index.html">Table Of Contents</a></h3>
+  <h3><a href="index.html">Tabla de Contenidos</a></h3>
   <ul>
 <li><a class="reference internal" href="#">Herramientas</a><ul>
 <li><a class="reference internal" href="#mostrar-informacion-del-pc">Mostrar información del PC</a></li>
@@ -462,28 +463,28 @@ siempre se ejecuta en otro hilo de proceso.</p>
 <h3>Related Topics</h3>
 <ul>
   <li><a href="index.html">Documentation overview</a><ul>
-      <li>Previous: <a href="debug.html" title="previous chapter">Herramientas para depuración</a></li>
-      <li>Next: <a href="email.html" title="next chapter">Send mail</a></li>
+      <li>Previous: <a href="debug.html" title="capítulo anterior">Herramientas para depuración</a></li>
+      <li>Next: <a href="email.html" title="próximo capítulo">Enviando correo</a></li>
   </ul></li>
 </ul>
 </div>
   <div role="note" aria-label="source link">
-    <h3>This Page</h3>
+    <h3>Esta página</h3>
     <ul class="this-page-menu">
       <li><a href="_sources/tools.txt"
-            rel="nofollow">Show Source</a></li>
+            rel="nofollow">Mostrar el código</a></li>
     </ul>
    </div>
 <div id="searchbox" style="display: none" role="search">
-  <h3>Quick search</h3>
+  <h3>Búsqueda rápida</h3>
     <form class="search" action="search.html" method="get">
       <input type="text" name="q" />
-      <input type="submit" value="Go" />
+      <input type="submit" value="Ir a" />
       <input type="hidden" name="check_keywords" value="yes" />
       <input type="hidden" name="area" value="default" />
     </form>
     <p class="searchtip" style="font-size: 90%">
-    Enter search terms or a module, class or function name.
+    Introduzca los términos de búsqueda o un nombre de módulo, clase o función.
     </p>
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script>

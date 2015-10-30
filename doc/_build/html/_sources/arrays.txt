@@ -1,8 +1,8 @@
-Arrays
-======
+Matrices
+========
 
-Append
-------
+Agregar
+-------
 
 .. code-block:: vbnet
 
@@ -10,7 +10,7 @@ Append
     a = util.append(a, "Sofia")
     util.msgbox( a )
 
-Delete
+Borrar
 ------
 
 .. code-block:: vbnet
@@ -18,8 +18,8 @@ Delete
     a = util.delete(a, "Nikole")
     util.msgbox( a )
 
-Extend
-------
+Extender
+--------
 
 .. code-block:: vbnet
 
@@ -28,8 +28,8 @@ Extend
     a = util.extend(a, a2)
     util.msgbox( a )
 
-Multiplicate
-------------
+Multiplicar
+-----------
 
 .. code-block:: vbnet
 
@@ -37,8 +37,8 @@ Multiplicate
     a = util.multi(a, 2)
     util.msgbox( a )
 
-Unique values
--------------
+Valores únicos
+--------------
 
 .. code-block:: vbnet
 
@@ -46,7 +46,7 @@ Unique values
     a = util.unique(a)
     util.msgbox( a )
 
-Reverse
+Reversa
 -------
 
 .. code-block:: vbnet
@@ -55,10 +55,10 @@ Reverse
     a = util.reverse(a)
     util.msgbox( a )
 
-Insert
-------
+Insertar
+--------
 
-Insert element in pos
+Insertar un elemento en una posición.
 
 .. code-block:: vbnet
 
@@ -66,10 +66,10 @@ Insert element in pos
     a = util.insert(a, 2, "Mary")
     util.msgbox( a )
 
-Remove
-------
+Remover
+-------
 
-Remove element in pos and return array and element
+Remover un elemento en una posición y regresar el elemento y la matriz
 
 .. code-block:: vbnet
 
@@ -78,29 +78,29 @@ Remove element in pos and return array and element
     util.msgbox( data(0) )  'Array without element in pos
     util.msgbox( data(1) )  'Element removed
 
-Remove first element found
+Remover el primer elemento encontrado.
 
 .. code-block:: vbnet
 
     a = Array(1,2,2,3,3,3,4,4,4,4,5,5,5,5,5,"Uno","Uno")
     util.msgbox( util.remove(a, 5, False) )
 
-Remove all elements found
+Remover todos los elementos encontrados.
 
 .. code-block:: vbnet
 
     util.msgbox( util.remove(a, 5, True) )
 
-Len
----
+Largo
+-----
 
 .. code-block:: vbnet
 
     a = Array(1,2,2,3,3,3,4,4,4,4,5,5,5,5,5,"Uno","Uno")
     util.msgbox( util.len(a) )
 
-Count
------
+Contar
+------
 
 .. code-block:: vbnet
 
@@ -109,8 +109,8 @@ Count
     util.msgbox( util.count(a, 5) )
     util.msgbox( util.count(a, "Uno") )
 
-Index
------
+Índice
+------
 
 .. code-block:: vbnet
 
@@ -118,8 +118,8 @@ Index
     util.msgbox( util.index(a, "Naomi") )
     util.msgbox( util.index(a, "Monica") )
 
-Max, Min adn Average
---------------------
+Máximo, Mínimo y Promedio
+-------------------------
 
 .. code-block:: vbnet
 
@@ -128,25 +128,25 @@ Max, Min adn Average
     util.msgbox( util.min(a) )
     util.msgbox( util.average(a) )
 
-Sum
----
+Suma
+----
 
 .. code-block:: vbnet
 
     a = Array(1,2,3,4,5,6,7,8,9,10)
     util.msgbox( util.sum(a) )
 
-Only sum values, the first element is string
+Solo se suman valores, el primer elemento es una candena.
 
 .. code-block:: vbnet
 
     a = Array("10", 1,2,3,4,5,6,7,8,9,10, "One", "Two")
     util.msgbox( util.sum(a) )
 
-Exists
+Existe
 ------
 
-If value exists in array
+Si un valor existe en la matriz.
 
 .. code-block:: vbnet
 
@@ -154,10 +154,10 @@ If value exists in array
     util.msgbox( util.exists(a, "One") )
     util.msgbox( util.exists(a, "Two") )
 
-Equal
+Igual
 -----
 
-If array 1 is equal to array2
+Si una matriz es igual a una segunda.
 
 .. code-block:: vbnet
 
@@ -168,10 +168,10 @@ If array 1 is equal to array2
     util.msgbox( util.equal(a1, a2) )
 
 
-Slice
------
+Rebanadas
+---------
 
-Copy
+Copiar
 
 .. code-block:: vbnet
 
@@ -179,21 +179,21 @@ Copy
     a2 = util.slice(a, "[:]")
     util.msgbox( a2 )
 
-First two elements
+Primeros dos (n) elementos.
 
 .. code-block:: vbnet
 
     a2 = util.slice(a, "[:2]")
     util.msgbox( a2 )
 
-Last two elements
+Ultimos dos (n) elementos.
 
 .. code-block:: vbnet
 
     a2 = util.slice(a, "[-2:]")
     util.msgbox( a2 )
 
-Range
+Rango
 
 .. code-block:: vbnet
 
@@ -206,7 +206,7 @@ Range
     a2 = util.slice(a, "[1::2]")
     util.msgbox( a2 )
 
-Reverse
+Reversa
 
 .. code-block:: vbnet
 
@@ -214,10 +214,10 @@ Reverse
     util.msgbox( a2 )
 
 
-Sorted
-------
+Ordenar
+-------
 
-Sorted unidimension array
+Ordenar una matriz unidimensional.
 
 .. code-block:: vbnet
 
@@ -225,7 +225,7 @@ Sorted unidimension array
     a = util.sorted(a, 0)
     util.msgbox( a )
 
-Sorted multidimension array
+Ordenar una matriz multidimensional.
 
 .. code-block:: vbnet
 
@@ -247,15 +247,15 @@ Sorted multidimension array
     a = util.sorted(a, 4)
     util.msgbox( a )
 
-Get column
+Regresar una columna de una matriz multidimensional
 
 .. code-block:: vbnet
 
     util.msgbox(util.getColumn(a, 1))
 
 
-Operations
-----------
+Operaciones
+-----------
 
 .. code-block:: vbnet
 

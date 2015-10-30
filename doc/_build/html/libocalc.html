@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Calc &mdash; EasyDev 2.0.0 documentation</title>
+    <title>Calc &mdash; documentación de EasyDev - 2.0.0</title>
     
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -23,7 +23,8 @@
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <link rel="top" title="EasyDev 2.0.0 documentation" href="index.html" />
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <link rel="top" title="documentación de EasyDev - 2.0.0" href="index.html" />
     <link rel="next" title="Writer" href="libowriter.html" />
     <link rel="prev" title="Documents" href="liboapp.html" />
    
@@ -39,9 +40,9 @@
           <div class="body" role="main">
             
   <div class="section" id="calc">
-<h1>Calc<a class="headerlink" href="#calc" title="Permalink to this headline">¶</a></h1>
+<h1>Calc<a class="headerlink" href="#calc" title="Enlazar permanentemente con este título">¶</a></h1>
 <div class="section" id="cells">
-<h2>Cells<a class="headerlink" href="#cells" title="Permalink to this headline">¶</a></h2>
+<h2>Cells<a class="headerlink" href="#cells" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>Get active cell, always back only one cell</p>
 <div class="highlight-vbnet"><div class="highlight"><pre><span class="k">Sub</span> <span class="nf">getCellDoc</span><span class="p">()</span>
     <span class="n">util</span> <span class="o">=</span> <span class="n">createUnoService</span><span class="p">(</span><span class="s">&quot;org.universolibre.EasyDev&quot;</span><span class="p">)</span>
@@ -104,7 +105,7 @@
 </div>
 </div>
 <div class="section" id="ranges">
-<h2>Ranges<a class="headerlink" href="#ranges" title="Permalink to this headline">¶</a></h2>
+<h2>Ranges<a class="headerlink" href="#ranges" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>Get active range</p>
 <div class="highlight-vbnet"><div class="highlight"><pre><span class="k">Sub</span> <span class="nf">getRangeDoc</span><span class="p">()</span>
     <span class="n">util</span> <span class="o">=</span> <span class="n">createUnoService</span><span class="p">(</span><span class="s">&quot;org.universolibre.EasyDev&quot;</span><span class="p">)</span>
@@ -167,7 +168,7 @@
 </div>
 </div>
 <div class="section" id="select-range">
-<h2>Select range<a class="headerlink" href="#select-range" title="Permalink to this headline">¶</a></h2>
+<h2>Select range<a class="headerlink" href="#select-range" title="Enlazar permanentemente con este título">¶</a></h2>
 <div class="highlight-vbnet"><div class="highlight"><pre><span class="k">Sub</span> <span class="nf">SelectRange</span><span class="p">()</span>
     <span class="n">util</span> <span class="o">=</span> <span class="n">createUnoService</span><span class="p">(</span><span class="s">&quot;org.universolibre.EasyDev&quot;</span><span class="p">)</span>
     <span class="n">address</span> <span class="o">=</span> <span class="n">createUnoStruct</span><span class="p">(</span><span class="s">&quot;org.universolibre.EasyDev.CellRangeAddress&quot;</span><span class="p">)</span>
@@ -186,7 +187,7 @@
 </div>
 </div>
 <div class="section" id="current-region">
-<h2>Current region<a class="headerlink" href="#current-region" title="Permalink to this headline">¶</a></h2>
+<h2>Current region<a class="headerlink" href="#current-region" title="Enlazar permanentemente con este título">¶</a></h2>
 <div class="highlight-vbnet"><div class="highlight"><pre><span class="k">Sub</span> <span class="nf">getCurrentRegion</span><span class="p">()</span>
 
     <span class="n">util</span> <span class="o">=</span> <span class="n">createUnoService</span><span class="p">(</span><span class="s">&quot;org.universolibre.EasyDev&quot;</span><span class="p">)</span>
@@ -214,7 +215,7 @@
 </div>
 </div>
 <div class="section" id="last-row">
-<h2>Last row<a class="headerlink" href="#last-row" title="Permalink to this headline">¶</a></h2>
+<h2>Last row<a class="headerlink" href="#last-row" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>Get last row into current region.</p>
 <div class="highlight-vbnet"><div class="highlight"><pre><span class="k">Sub</span> <span class="nf">getLastRow</span><span class="p">()</span>
     <span class="n">util</span> <span class="o">=</span> <span class="n">createUnoService</span><span class="p">(</span><span class="s">&quot;org.universolibre.EasyDev&quot;</span><span class="p">)</span>
@@ -229,7 +230,7 @@
 </div>
 </div>
 <div class="section" id="next-value">
-<h2>Next value<a class="headerlink" href="#next-value" title="Permalink to this headline">¶</a></h2>
+<h2>Next value<a class="headerlink" href="#next-value" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>In range values. Get nex value in column A(0), or B(1), etc.</p>
 <div class="highlight-vbnet"><div class="highlight"><pre><span class="k">Sub</span> <span class="nf">getNextID</span><span class="p">()</span>
     <span class="n">util</span> <span class="o">=</span> <span class="n">createUnoService</span><span class="p">(</span><span class="s">&quot;org.universolibre.EasyDev&quot;</span><span class="p">)</span>
@@ -245,7 +246,7 @@
 <a class="reference internal image-reference" href="_images/img009.png"><img alt="_images/img009.png" class="align-center" src="_images/img009.png" style="width: 400px;" /></a>
 </div>
 <div class="section" id="cell-value">
-<h2>Cell value<a class="headerlink" href="#cell-value" title="Permalink to this headline">¶</a></h2>
+<h2>Cell value<a class="headerlink" href="#cell-value" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>Automatic detect type: string, value or formula.</p>
 <div class="highlight-vbnet"><div class="highlight"><pre><span class="k">Sub</span> <span class="nf">CellValue</span><span class="p">()</span>
     <span class="n">util</span> <span class="o">=</span> <span class="n">createUnoService</span><span class="p">(</span><span class="s">&quot;org.universolibre.EasyDev&quot;</span><span class="p">)</span>
@@ -281,7 +282,7 @@
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="index.html">Table Of Contents</a></h3>
+  <h3><a href="index.html">Tabla de Contenidos</a></h3>
   <ul>
 <li><a class="reference internal" href="#">Calc</a><ul>
 <li><a class="reference internal" href="#cells">Cells</a></li>
@@ -298,28 +299,28 @@
 <h3>Related Topics</h3>
 <ul>
   <li><a href="index.html">Documentation overview</a><ul>
-      <li>Previous: <a href="liboapp.html" title="previous chapter">Documents</a></li>
-      <li>Next: <a href="libowriter.html" title="next chapter">Writer</a></li>
+      <li>Previous: <a href="liboapp.html" title="capítulo anterior">Documents</a></li>
+      <li>Next: <a href="libowriter.html" title="próximo capítulo">Writer</a></li>
   </ul></li>
 </ul>
 </div>
   <div role="note" aria-label="source link">
-    <h3>This Page</h3>
+    <h3>Esta página</h3>
     <ul class="this-page-menu">
       <li><a href="_sources/libocalc.txt"
-            rel="nofollow">Show Source</a></li>
+            rel="nofollow">Mostrar el código</a></li>
     </ul>
    </div>
 <div id="searchbox" style="display: none" role="search">
-  <h3>Quick search</h3>
+  <h3>Búsqueda rápida</h3>
     <form class="search" action="search.html" method="get">
       <input type="text" name="q" />
-      <input type="submit" value="Go" />
+      <input type="submit" value="Ir a" />
       <input type="hidden" name="check_keywords" value="yes" />
       <input type="hidden" name="area" value="default" />
     </form>
     <p class="searchtip" style="font-size: 90%">
-    Enter search terms or a module, class or function name.
+    Introduzca los términos de búsqueda o un nombre de módulo, clase o función.
     </p>
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script>

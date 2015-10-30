@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Documents &mdash; EasyDev 2.0.0 documentation</title>
+    <title>Documents &mdash; documentación de EasyDev - 2.0.0</title>
     
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -23,9 +23,10 @@
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <link rel="top" title="EasyDev 2.0.0 documentation" href="index.html" />
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <link rel="top" title="documentación de EasyDev - 2.0.0" href="index.html" />
     <link rel="next" title="Calc" href="libocalc.html" />
-    <link rel="prev" title="Arrays" href="arrays.html" />
+    <link rel="prev" title="Matrices" href="arrays.html" />
    
   
   <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9">
@@ -39,9 +40,9 @@
           <div class="body" role="main">
             
   <div class="section" id="documents">
-<h1>Documents<a class="headerlink" href="#documents" title="Permalink to this headline">¶</a></h1>
+<h1>Documents<a class="headerlink" href="#documents" title="Enlazar permanentemente con este título">¶</a></h1>
 <div class="section" id="new">
-<h2>New<a class="headerlink" href="#new" title="Permalink to this headline">¶</a></h2>
+<h2>New<a class="headerlink" href="#new" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>Look: <a class="reference external" href="http://www.openoffice.org/api/docs/common/ref/com/sun/star/frame/XComponentLoader.html">http://www.openoffice.org/api/docs/common/ref/com/sun/star/frame/XComponentLoader.html</a></p>
 <div class="highlight-vbnet"><div class="highlight"><pre><span class="k">Sub</span> <span class="nf">NewDoc</span><span class="p">()</span>
     <span class="c">&#39;Create new doc</span>
@@ -64,10 +65,10 @@
 </div>
 </div>
 <div class="section" id="get-doc">
-<h2>Get doc<a class="headerlink" href="#get-doc" title="Permalink to this headline">¶</a></h2>
+<h2>Get doc<a class="headerlink" href="#get-doc" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>Current</p>
 <div class="admonition important">
-<p class="first admonition-title">Important</p>
+<p class="first admonition-title">Importante</p>
 <p class="last">Current doc can be IDE</p>
 </div>
 <div class="highlight-vbnet"><div class="highlight"><pre><span class="n">doc1</span> <span class="o">=</span> <span class="n">util</span><span class="p">.</span><span class="n">getDoc</span><span class="p">(</span><span class="s">&quot;&quot;</span><span class="p">)</span>
@@ -81,7 +82,7 @@
 </div>
 </div>
 <div class="section" id="get-type">
-<h2>Get type<a class="headerlink" href="#get-type" title="Permalink to this headline">¶</a></h2>
+<h2>Get type<a class="headerlink" href="#get-type" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>Values return: calc, writer, impress, draw, math, base, ide</p>
 <div class="highlight-vbnet"><div class="highlight"><pre><span class="n">doc1</span> <span class="o">=</span> <span class="n">util</span><span class="p">.</span><span class="n">newDoc</span><span class="p">(</span><span class="s">&quot;sdraw&quot;</span><span class="p">)</span>
 <span class="n">MsgBox</span> <span class="n">util</span><span class="p">.</span><span class="n">getTypeDoc</span><span class="p">(</span><span class="n">doc1</span><span class="p">)</span>
@@ -92,7 +93,7 @@
 </div>
 </div>
 <div class="section" id="get-documents">
-<h2>Get documents<a class="headerlink" href="#get-documents" title="Permalink to this headline">¶</a></h2>
+<h2>Get documents<a class="headerlink" href="#get-documents" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>Get all open documents</p>
 <div class="highlight-vbnet"><div class="highlight"><pre><span class="n">docs</span> <span class="o">=</span> <span class="n">util</span><span class="p">.</span><span class="n">getDocs</span><span class="p">()</span>
 <span class="n">MsgBox</span> <span class="n">util</span><span class="p">.</span><span class="n">format</span><span class="p">(</span><span class="s">&quot;{} Open documents&quot;</span><span class="p">,</span> <span class="n">util</span><span class="p">.</span><span class="n">len</span><span class="p">(</span><span class="n">docs</span><span class="p">))</span>
@@ -100,7 +101,7 @@
 </div>
 </div>
 <div class="section" id="open">
-<h2>Open<a class="headerlink" href="#open" title="Permalink to this headline">¶</a></h2>
+<h2>Open<a class="headerlink" href="#open" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>More info and options:</p>
 <blockquote>
 <div><ul class="simple">
@@ -135,7 +136,7 @@
 </div>
 </div>
 <div class="section" id="active">
-<h2>Active<a class="headerlink" href="#active" title="Permalink to this headline">¶</a></h2>
+<h2>Active<a class="headerlink" href="#active" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>Send focus to document</p>
 <div class="highlight-vbnet"><div class="highlight"><pre><span class="n">doc1</span> <span class="o">=</span> <span class="n">util</span><span class="p">.</span><span class="n">newDoc</span><span class="p">(</span><span class="s">&quot;&quot;</span><span class="p">)</span>
 <span class="n">doc2</span> <span class="o">=</span> <span class="n">util</span><span class="p">.</span><span class="n">newDoc</span><span class="p">(</span><span class="s">&quot;swriter&quot;</span><span class="p">)</span>
@@ -145,7 +146,7 @@
 </div>
 </div>
 <div class="section" id="status-bar">
-<h2>Status bar<a class="headerlink" href="#status-bar" title="Permalink to this headline">¶</a></h2>
+<h2>Status bar<a class="headerlink" href="#status-bar" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>Set text and show progress bar</p>
 <div class="highlight-vbnet"><div class="highlight"><pre><span class="c">&#39;Get current doc</span>
 <span class="n">doc</span> <span class="o">=</span> <span class="n">util</span><span class="p">.</span><span class="n">getDoc</span><span class="p">(</span><span class="s">&quot;&quot;</span><span class="p">)</span>
@@ -165,7 +166,7 @@
 </div>
 </div>
 <div class="section" id="export-pdf">
-<h2>Export PDF<a class="headerlink" href="#export-pdf" title="Permalink to this headline">¶</a></h2>
+<h2>Export PDF<a class="headerlink" href="#export-pdf" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>All options in <a class="reference external" href="http://wiki.services.openoffice.org/wiki/API/Tutorials/PDF_export">PDF Export</a> in wiki.</p>
 <p>If export is correct, return path save PDF</p>
 <p>Export current doc in the same folder and same name</p>
@@ -203,7 +204,7 @@
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="index.html">Table Of Contents</a></h3>
+  <h3><a href="index.html">Tabla de Contenidos</a></h3>
   <ul>
 <li><a class="reference internal" href="#">Documents</a><ul>
 <li><a class="reference internal" href="#new">New</a></li>
@@ -221,28 +222,28 @@
 <h3>Related Topics</h3>
 <ul>
   <li><a href="index.html">Documentation overview</a><ul>
-      <li>Previous: <a href="arrays.html" title="previous chapter">Arrays</a></li>
-      <li>Next: <a href="libocalc.html" title="next chapter">Calc</a></li>
+      <li>Previous: <a href="arrays.html" title="capítulo anterior">Matrices</a></li>
+      <li>Next: <a href="libocalc.html" title="próximo capítulo">Calc</a></li>
   </ul></li>
 </ul>
 </div>
   <div role="note" aria-label="source link">
-    <h3>This Page</h3>
+    <h3>Esta página</h3>
     <ul class="this-page-menu">
       <li><a href="_sources/liboapp.txt"
-            rel="nofollow">Show Source</a></li>
+            rel="nofollow">Mostrar el código</a></li>
     </ul>
    </div>
 <div id="searchbox" style="display: none" role="search">
-  <h3>Quick search</h3>
+  <h3>Búsqueda rápida</h3>
     <form class="search" action="search.html" method="get">
       <input type="text" name="q" />
-      <input type="submit" value="Go" />
+      <input type="submit" value="Ir a" />
       <input type="hidden" name="check_keywords" value="yes" />
       <input type="hidden" name="area" value="default" />
     </form>
     <p class="searchtip" style="font-size: 90%">
-    Enter search terms or a module, class or function name.
+    Introduzca los términos de búsqueda o un nombre de módulo, clase o función.
     </p>
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script>
