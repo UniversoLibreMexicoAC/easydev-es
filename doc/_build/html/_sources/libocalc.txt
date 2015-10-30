@@ -1,10 +1,10 @@
 Calc
 ===============
 
-Cells
------
+Celdas
+------
 
-Get active cell, always back only one cell
+Regresar la celda activa, siempre se deuelve una sola celda.
 
 .. code-block:: vbnet
 
@@ -19,7 +19,7 @@ Get active cell, always back only one cell
     End Sub
 
 
-Get active cell from document by title name, document must be open
+Regresar la celda activa, buscando el documento por título, el documento debe estar previamente abierto.
 
 .. code-block:: vbnet
 
@@ -29,7 +29,7 @@ Get active cell from document by title name, document must be open
         msg = util.format("{} {}", Array(cell.ImplementationName, cell.AbsoluteName))
         util.msgbox(msg)
 
-Get active cell from object doc
+Regresar la celda activa de un documento
 
 .. code-block:: vbnet
 
@@ -40,7 +40,7 @@ Get active cell from object doc
         msg = util.format("{} {}", Array(cell.ImplementationName, cell.AbsoluteName))
         util.msgbox(msg)
 
-Get cell from object doc, sheet by name, cell by name
+Regresar una celda de un documento, de una hoja y celda por nombre.
 
 .. code-block:: vbnet
 
@@ -52,7 +52,7 @@ Get cell from object doc, sheet by name, cell by name
     msg = util.format("{} {}", Array(cell.ImplementationName, cell.AbsoluteName))
     util.msgbox(msg)
 
-Get cell from object doc, sheet by name, cell by col, row
+Regresar una celda de un documento, de una hoja por nombre y la celda por posición de columna y fila.
 
 .. code-block:: vbnet
 
@@ -66,7 +66,7 @@ Get cell from object doc, sheet by name, cell by col, row
     msg = util.format("{} {}", Array(cell.ImplementationName, cell.AbsoluteName))
     util.msgbox(msg)
 
-Get cell from object sheet, object doc is ommited
+Regresa una celda de una instancua de una hoja, el parametro documento es omitido.
 
 .. code-block:: vbnet
 
@@ -77,10 +77,11 @@ Get cell from object sheet, object doc is ommited
     msg = util.format("{} {}", Array(cell.ImplementationName, cell.AbsoluteName))
     util.msgbox(msg)
 
-Ranges
+
+Rangos
 ------
 
-Get active range
+Regresar el rango activo.
 
 .. code-block:: vbnet
 
@@ -94,7 +95,7 @@ Get active range
         util.msgbox(msg)
     End Sub
 
-Get active range from document by title name, document must be open
+Regresar el rango activo de un documento buscado por título, el documento debe estar previamente abierto.
 
 .. code-block:: vbnet
 
@@ -104,7 +105,7 @@ Get active range from document by title name, document must be open
     msg = util.format("{} {}", Array(range.ImplementationName, range.AbsoluteName))
     util.msgbox(msg)
 
-Get active range from object doc
+Regresar el rango activo de uns instancia de un documento.
 
 .. code-block:: vbnet
 
@@ -115,7 +116,7 @@ Get active range from object doc
         msg = util.format("{} {}", Array(range.ImplementationName, range.AbsoluteName))
         util.msgbox(msg)
 
-Get range from object doc, sheet by name, range by name
+Regresar el rango de una instancia de un documento, de una hoja y rango por nombre.
 
 .. code-block:: vbnet
 
@@ -127,7 +128,8 @@ Get range from object doc, sheet by name, range by name
     msg = util.format("{} {}", Array(range.ImplementationName, range.AbsoluteName))
     util.msgbox(msg)
 
-Get range from object doc, sheet by name, range by position
+Regresar el rango de una instancia de un documento, de una hoja por nombre y del
+rango por posición.
 
 .. code-block:: vbnet
 
@@ -141,7 +143,7 @@ Get range from object doc, sheet by name, range by position
     msg = util.format("{} {}", Array(range.ImplementationName, range.AbsoluteName))
     util.msgbox(msg)
 
-Get range from object sheet, object doc is ommited
+Regresar el rango de uns instancia de una hoja, el argumento documento es omitido.
 
 .. code-block:: vbnet
 
@@ -152,8 +154,9 @@ Get range from object sheet, object doc is ommited
     msg = util.format("{} {}", Array(range.ImplementationName, range.AbsoluteName))
     util.msgbox(msg)
 
-Select range
-------------
+
+Seleccionar un rango
+--------------------
 
 .. code-block:: vbnet
 
@@ -172,8 +175,9 @@ Select range
 
     End Sub
 
-Current region
---------------
+
+Región actual
+-------------
 
 .. code-block:: vbnet
 
@@ -189,7 +193,8 @@ Current region
 
     End Sub
 
-Only one cell into current region is necesary, get cursor
+Solo es necesario pasar una celda que este dentro de la región actual. Se obtiene
+un objeto **cursor**.
 
 .. code-block:: vbnet
 
@@ -197,7 +202,7 @@ Only one cell into current region is necesary, get cursor
     msg = util.format("{} {}", Array(cursor.ImplementationName, cursor.AbsoluteName))
     util.msgbox(msg)
 
-Only one cell into current region is necesary, get range
+Se devuelve un objeto rango (**range**).
 
 .. code-block:: vbnet
 
@@ -205,10 +210,11 @@ Only one cell into current region is necesary, get range
     msg = util.format("{} {}", Array(range.ImplementationName, range.AbsoluteName))
     util.msgbox(msg)
 
-Last row
---------
 
-Get last row into current region.
+Ultima fila
+-----------
+
+Devolver la ultima fila dentro dentro de la región actual.
 
 .. code-block:: vbnet
 
@@ -222,10 +228,12 @@ Get last row into current region.
         util.msgbox(row)
     End Sub
 
-Next value
-----------
 
-In range values. Get nex value in column A(0), or B(1), etc.
+Siguiente valor
+---------------
+
+En los valores de un rango de celdas, devolver el siguiente valor en la columna
+pasada, por ejemplo 0 (A), 1 (B), etc.
 
 .. code-block:: vbnet
 
@@ -243,10 +251,11 @@ In range values. Get nex value in column A(0), or B(1), etc.
     :width: 400px
     :align: center
 
-Cell value
-----------
 
-Automatic detect type: string, value or formula.
+Valor de celda
+--------------
+
+Detección automática del tipo de contenido: cadenas (string), valores (value) o formulas.
 
 .. code-block:: vbnet
 
