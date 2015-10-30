@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Dialogs &mdash; documentación de EasyDev - 2.0.0</title>
+    <title>Cuadros de diálogo &mdash; documentación de EasyDev - 2.0.0</title>
     
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -25,7 +25,7 @@
     <script type="text/javascript" src="_static/doctools.js"></script>
     <script type="text/javascript" src="_static/translations.js"></script>
     <link rel="top" title="documentación de EasyDev - 2.0.0" href="index.html" />
-    <link rel="prev" title="Data Base" href="libobase.html" />
+    <link rel="prev" title="Bases de datos" href="libobase.html" />
    
   
   <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9">
@@ -38,11 +38,12 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="dialogs">
-<h1>Dialogs<a class="headerlink" href="#dialogs" title="Enlazar permanentemente con este título">¶</a></h1>
-<div class="section" id="create-dialog">
-<h2>Create dialog<a class="headerlink" href="#create-dialog" title="Enlazar permanentemente con este título">¶</a></h2>
-<p>Create dialog from path.</p>
+  <div class="section" id="cuadros-de-dialogo">
+<h1>Cuadros de diálogo<a class="headerlink" href="#cuadros-de-dialogo" title="Enlazar permanentemente con este título">¶</a></h1>
+<div class="section" id="crear-dialogo">
+<h2>Crear diálogo<a class="headerlink" href="#crear-dialogo" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Crear cuadro de diálogo a partir de un archivo. Puedes diseñarlo en el IDE,
+exportarlo y crearlo desde el archivo exportardo.</p>
 <a class="reference internal image-reference" href="_images/img010.png"><img alt="_images/img010.png" class="align-center" src="_images/img010.png" style="width: 400px;" /></a>
 <div class="highlight-vbnet"><div class="highlight"><pre><span class="k">Sub</span> <span class="nf">CreateDialog</span>
     <span class="n">util</span> <span class="o">=</span> <span class="n">createUnoService</span><span class="p">(</span><span class="s">&quot;org.universolibre.EasyDev&quot;</span><span class="p">)</span>
@@ -55,9 +56,9 @@
 </pre></div>
 </div>
 </div>
-<div class="section" id="label-hyperlink">
-<h2>Label hyperlink<a class="headerlink" href="#label-hyperlink" title="Enlazar permanentemente con este título">¶</a></h2>
-<p>Automatic add event mouse over</p>
+<div class="section" id="etiqueta-con-hipervinculo">
+<h2>Etiqueta con hipervínculo<a class="headerlink" href="#etiqueta-con-hipervinculo" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Automáticamente se agregar el evento <strong>ratón encima</strong>.</p>
 <a class="reference internal image-reference" href="_images/img011.png"><img alt="_images/img011.png" class="align-center" src="_images/img011.png" style="width: 350px;" /></a>
 <div class="highlight-vbnet"><div class="highlight"><pre><span class="n">path</span> <span class="o">=</span> <span class="s">&quot;/home/USER/dlg_test.xdl&quot;</span>
 <span class="n">dlg</span> <span class="o">=</span> <span class="n">util</span><span class="p">.</span><span class="n">createDialog</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
@@ -75,9 +76,10 @@
 </pre></div>
 </div>
 </div>
-<div class="section" id="roadmap">
-<h2>Roadmap<a class="headerlink" href="#roadmap" title="Enlazar permanentemente con este título">¶</a></h2>
-<p>Add menu options, automatic add event item change for update property Step in dialog.</p>
+<div class="section" id="mapa-de-ruta">
+<h2>Mapa de ruta<a class="headerlink" href="#mapa-de-ruta" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Agregar un menú de opciones, automáticamente se agregar el evento <strong>item cambiado</strong>
+que actualiza la propiedad Paso(<strong>Step</strong>) del cuadro de diálogo.</p>
 <a class="reference internal image-reference" href="_images/img012.png"><img alt="_images/img012.png" class="align-center" src="_images/img012.png" style="width: 200px;" /></a>
 <div class="highlight-vbnet"><div class="highlight"><pre><span class="n">path</span> <span class="o">=</span> <span class="s">&quot;/home/USER/dlg_test.xdl&quot;</span>
 <span class="n">dlg</span> <span class="o">=</span> <span class="n">util</span><span class="p">.</span><span class="n">createDialog</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
@@ -95,9 +97,10 @@
 </pre></div>
 </div>
 </div>
-<div class="section" id="grid">
-<h2>Grid<a class="headerlink" href="#grid" title="Enlazar permanentemente con este título">¶</a></h2>
-<p>Create grid and set data from array. Detect column values and format.</p>
+<div class="section" id="rejilla">
+<h2>Rejilla<a class="headerlink" href="#rejilla" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Crear una rejilla y establecer su contenido desde un array. Automáticamente se
+detectan las columnas con valores y se formatean.</p>
 <a class="reference internal image-reference" href="_images/img013.png"><img alt="_images/img013.png" class="align-center" src="_images/img013.png" style="width: 300px;" /></a>
 <div class="highlight-vbnet"><div class="highlight"><pre><span class="n">c1</span> <span class="o">=</span> <span class="n">Array</span><span class="p">(</span> _
     <span class="n">Array</span><span class="p">(</span><span class="s">&quot;Title&quot;</span><span class="p">,</span> <span class="s">&quot;State&quot;</span><span class="p">),</span> _
@@ -131,13 +134,13 @@
 <span class="n">dlg</span><span class="p">.</span><span class="n">dispose</span><span class="p">()</span>
 </pre></div>
 </div>
-<p>Add data from range cells.</p>
+<p>Agregar datos de un rango de celdas.</p>
 <div class="highlight-vbnet"><div class="highlight"><pre><span class="n">data</span> <span class="o">=</span> <span class="n">ThisComponent</span><span class="p">.</span><span class="n">getCurrentSelection</span><span class="p">().</span><span class="n">getDataarray</span><span class="p">()</span>
 <span class="n">col_format</span> <span class="o">=</span> <span class="n">Array</span><span class="p">()</span>
 <span class="n">util</span><span class="p">.</span><span class="n">setGridData</span><span class="p">(</span><span class="n">grid</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">col_format</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Change default format for columns with values.</p>
+<p>Cambiar el formato predeterminado de las columnas con valores.</p>
 <div class="highlight-vbnet"><div class="highlight"><pre><span class="n">data</span> <span class="o">=</span> <span class="n">ThisComponent</span><span class="p">.</span><span class="n">getCurrentSelection</span><span class="p">().</span><span class="n">getDataarray</span><span class="p">()</span>
 
 <span class="c">&#39;Default format</span>
@@ -147,13 +150,13 @@
 <span class="n">util</span><span class="p">.</span><span class="n">setGridData</span><span class="p">(</span><span class="n">grid</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">col_format</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Or change format for each column.</p>
+<p>O puedes establecer el formato para cada columna.</p>
 <div class="highlight-vbnet"><div class="highlight"><pre><span class="n">data</span> <span class="o">=</span> <span class="n">ThisComponent</span><span class="p">.</span><span class="n">getCurrentSelection</span><span class="p">().</span><span class="n">getDataarray</span><span class="p">()</span>
 <span class="n">col_format</span> <span class="o">=</span> <span class="n">Array</span><span class="p">(</span><span class="s">&quot;{}&quot;</span><span class="p">,</span> <span class="s">&quot;$ {0:,.2f}&quot;</span><span class="p">)</span>
 <span class="n">util</span><span class="p">.</span><span class="n">setGridData</span><span class="p">(</span><span class="n">grid</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">col_format</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>And get data grid in array.</p>
+<p>Y devolver los datos de la rejilla.</p>
 <div class="highlight-vbnet"><div class="highlight"><pre><span class="n">data</span> <span class="o">=</span> <span class="n">util</span><span class="p">.</span><span class="n">getGridData</span><span class="p">(</span><span class="n">grid</span><span class="p">,</span> <span class="n">Array</span><span class="p">())</span>
 <span class="n">util</span><span class="p">.</span><span class="n">msgbox</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
 </pre></div>
@@ -169,11 +172,11 @@
         <div class="sphinxsidebarwrapper">
   <h3><a href="index.html">Tabla de Contenidos</a></h3>
   <ul>
-<li><a class="reference internal" href="#">Dialogs</a><ul>
-<li><a class="reference internal" href="#create-dialog">Create dialog</a></li>
-<li><a class="reference internal" href="#label-hyperlink">Label hyperlink</a></li>
-<li><a class="reference internal" href="#roadmap">Roadmap</a></li>
-<li><a class="reference internal" href="#grid">Grid</a></li>
+<li><a class="reference internal" href="#">Cuadros de diálogo</a><ul>
+<li><a class="reference internal" href="#crear-dialogo">Crear diálogo</a></li>
+<li><a class="reference internal" href="#etiqueta-con-hipervinculo">Etiqueta con hipervínculo</a></li>
+<li><a class="reference internal" href="#mapa-de-ruta">Mapa de ruta</a></li>
+<li><a class="reference internal" href="#rejilla">Rejilla</a></li>
 </ul>
 </li>
 </ul>
@@ -181,7 +184,7 @@
 <h3>Related Topics</h3>
 <ul>
   <li><a href="index.html">Documentation overview</a><ul>
-      <li>Previous: <a href="libobase.html" title="capítulo anterior">Data Base</a></li>
+      <li>Previous: <a href="libobase.html" title="capítulo anterior">Bases de datos</a></li>
   </ul></li>
 </ul>
 </div>

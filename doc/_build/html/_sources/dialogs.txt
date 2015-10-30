@@ -1,10 +1,11 @@
-Dialogs
-=======
+Cuadros de diálogo
+==================
 
-Create dialog
+Crear diálogo
 -------------
 
-Create dialog from path.
+Crear cuadro de diálogo a partir de un archivo. Puedes diseñarlo en el IDE,
+exportarlo y crearlo desde el archivo exportardo.
 
 .. image:: images/img010.png
     :width: 400px
@@ -23,10 +24,10 @@ Create dialog from path.
 
 
 
-Label hyperlink
----------------
+Etiqueta con hipervínculo
+-------------------------
 
-Automatic add event mouse over
+Automáticamente se agregar el evento **ratón encima**.
 
 .. image:: images/img011.png
     :width: 350px
@@ -48,10 +49,12 @@ Automatic add event mouse over
     dlg.execute()
     dlg.dispose()
 
-Roadmap
--------
 
-Add menu options, automatic add event item change for update property Step in dialog.
+Mapa de ruta
+------------
+
+Agregar un menú de opciones, automáticamente se agregar el evento **item cambiado**
+que actualiza la propiedad Paso(**Step**) del cuadro de diálogo.
 
 .. image:: images/img012.png
     :width: 200px
@@ -73,10 +76,12 @@ Add menu options, automatic add event item change for update property Step in di
     dlg.execute()
     dlg.dispose()
 
-Grid
-----
 
-Create grid and set data from array. Detect column values and format.
+Rejilla
+-------
+
+Crear una rejilla y establecer su contenido desde un array. Automáticamente se
+detectan las columnas con valores y se formatean.
 
 .. image:: images/img013.png
     :width: 300px
@@ -115,7 +120,7 @@ Create grid and set data from array. Detect column values and format.
     dlg.execute()
     dlg.dispose()
 
-Add data from range cells.
+Agregar datos de un rango de celdas.
 
 .. code-block:: vbnet
 
@@ -123,7 +128,7 @@ Add data from range cells.
     col_format = Array()
     util.setGridData(grid, data, col_format)
 
-Change default format for columns with values.
+Cambiar el formato predeterminado de las columnas con valores.
 
 .. code-block:: vbnet
 
@@ -135,7 +140,7 @@ Change default format for columns with values.
     col_format = Array()
     util.setGridData(grid, data, col_format)
 
-Or change format for each column.
+O puedes establecer el formato para cada columna.
 
 .. code-block:: vbnet
 
@@ -143,7 +148,7 @@ Or change format for each column.
     col_format = Array("{}", "$ {0:,.2f}")
     util.setGridData(grid, data, col_format)
 
-And get data grid in array.
+Y devolver los datos de la rejilla.
 
 .. code-block:: vbnet
 
