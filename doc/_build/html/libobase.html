@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Data Base &mdash; documentación de EasyDev - 2.0.0</title>
+    <title>Data Base &mdash; EasyDev 2.0.0 documentation</title>
     
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -23,8 +23,7 @@
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <script type="text/javascript" src="_static/translations.js"></script>
-    <link rel="top" title="documentación de EasyDev - 2.0.0" href="index.html" />
+    <link rel="top" title="EasyDev 2.0.0 documentation" href="index.html" />
     <link rel="prev" title="Writer" href="libowriter.html" />
    
   
@@ -39,9 +38,24 @@
           <div class="body" role="main">
             
   <div class="section" id="data-base">
-<h1>Data Base<a class="headerlink" href="#data-base" title="Enlazar permanentemente con este título">¶</a></h1>
+<h1>Data Base<a class="headerlink" href="#data-base" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="odbc">
-<h2>ODBC<a class="headerlink" href="#odbc" title="Enlazar permanentemente con este título">¶</a></h2>
+<h2>ODBC<a class="headerlink" href="#odbc" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-vbnet"><div class="highlight"><pre><span class="k">Sub</span> <span class="nf">ConexionODBC</span><span class="p">()</span>
+
+    <span class="n">util</span> <span class="o">=</span> <span class="n">createUnoService</span><span class="p">(</span><span class="s">&quot;org.universolibre.EasyDev&quot;</span><span class="p">)</span>
+
+    <span class="n">odbc</span> <span class="o">=</span> <span class="s">&quot;ConSQL&quot;</span>
+    <span class="n">user</span> <span class="o">=</span> <span class="s">&quot;sa&quot;</span>
+    <span class="n">passw</span> <span class="o">=</span> <span class="s">&quot;letmein&quot;</span>
+
+    <span class="n">con</span> <span class="o">=</span> <span class="n">util</span><span class="p">.</span><span class="n">conODBC</span><span class="p">(</span><span class="n">odbc</span><span class="p">,</span> <span class="n">user</span><span class="p">,</span> <span class="n">passw</span><span class="p">)</span>
+
+    <span class="n">util</span><span class="p">.</span><span class="n">msgbox</span><span class="p">(</span><span class="n">con</span><span class="p">)</span>
+
+<span class="k">End</span> <span class="k">Sub</span>
+</pre></div>
+</div>
 </div>
 </div>
 
@@ -51,7 +65,7 @@
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="index.html">Tabla de Contenidos</a></h3>
+  <h3><a href="index.html">Table Of Contents</a></h3>
   <ul>
 <li><a class="reference internal" href="#">Data Base</a><ul>
 <li><a class="reference internal" href="#odbc">ODBC</a></li>
@@ -62,27 +76,27 @@
 <h3>Related Topics</h3>
 <ul>
   <li><a href="index.html">Documentation overview</a><ul>
-      <li>Previous: <a href="libowriter.html" title="capítulo anterior">Writer</a></li>
+      <li>Previous: <a href="libowriter.html" title="previous chapter">Writer</a></li>
   </ul></li>
 </ul>
 </div>
   <div role="note" aria-label="source link">
-    <h3>Esta página</h3>
+    <h3>This Page</h3>
     <ul class="this-page-menu">
       <li><a href="_sources/libobase.txt"
-            rel="nofollow">Mostrar el código</a></li>
+            rel="nofollow">Show Source</a></li>
     </ul>
    </div>
 <div id="searchbox" style="display: none" role="search">
-  <h3>Búsqueda rápida</h3>
+  <h3>Quick search</h3>
     <form class="search" action="search.html" method="get">
       <input type="text" name="q" />
-      <input type="submit" value="Ir a" />
+      <input type="submit" value="Go" />
       <input type="hidden" name="check_keywords" value="yes" />
       <input type="hidden" name="area" value="default" />
     </form>
     <p class="searchtip" style="font-size: 90%">
-    Introduzca los términos de búsqueda o un nombre de módulo, clase o función.
+    Enter search terms or a module, class or function name.
     </p>
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script>

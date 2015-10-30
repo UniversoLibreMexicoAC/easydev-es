@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Writer &mdash; documentación de EasyDev - 2.0.0</title>
+    <title>Writer &mdash; EasyDev 2.0.0 documentation</title>
     
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -23,8 +23,7 @@
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <script type="text/javascript" src="_static/translations.js"></script>
-    <link rel="top" title="documentación de EasyDev - 2.0.0" href="index.html" />
+    <link rel="top" title="EasyDev 2.0.0 documentation" href="index.html" />
     <link rel="next" title="Data Base" href="libobase.html" />
     <link rel="prev" title="Calc" href="libocalc.html" />
    
@@ -40,9 +39,28 @@
           <div class="body" role="main">
             
   <div class="section" id="writer">
-<h1>Writer<a class="headerlink" href="#writer" title="Enlazar permanentemente con este título">¶</a></h1>
-<div class="section" id="text">
-<h2>Text<a class="headerlink" href="#text" title="Enlazar permanentemente con este título">¶</a></h2>
+<h1>Writer<a class="headerlink" href="#writer" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="paragraphs">
+<h2>Paragraphs<a class="headerlink" href="#paragraphs" title="Permalink to this headline">¶</a></h2>
+<p>Get all paragraphs in document.</p>
+<div class="highlight-vbnet"><div class="highlight"><pre><span class="k">Sub</span> <span class="nf">GetParagraps</span><span class="p">()</span>
+    <span class="n">util</span> <span class="o">=</span> <span class="n">createUnoService</span><span class="p">(</span><span class="s">&quot;org.universolibre.EasyDev&quot;</span><span class="p">)</span>
+
+    <span class="c">&#39;Get current doc</span>
+    <span class="n">doc</span> <span class="o">=</span> <span class="n">util</span><span class="p">.</span><span class="n">getDoc</span><span class="p">(</span><span class="s">&quot;&quot;</span><span class="p">)</span>
+
+    <span class="c">&#39;Get all paragraphs</span>
+    <span class="n">paragraphs</span> <span class="o">=</span> <span class="n">util</span><span class="p">.</span><span class="n">getParagraphs</span><span class="p">(</span><span class="n">doc</span><span class="p">,</span> <span class="k">True</span><span class="p">)</span>
+    <span class="n">util</span><span class="p">.</span><span class="n">msgbox</span><span class="p">(</span><span class="n">util</span><span class="p">.</span><span class="n">len</span><span class="p">(</span><span class="n">paragraphs</span><span class="p">))</span>
+
+<span class="k">End</span> <span class="k">Sub</span>
+</pre></div>
+</div>
+<p>Get paragraphs with text</p>
+<div class="highlight-vbnet"><div class="highlight"><pre><span class="n">paragraphs</span> <span class="o">=</span> <span class="n">util</span><span class="p">.</span><span class="n">getParagraphs</span><span class="p">(</span><span class="n">doc</span><span class="p">,</span> <span class="k">False</span><span class="p">)</span>
+<span class="n">util</span><span class="p">.</span><span class="n">msgbox</span><span class="p">(</span><span class="n">util</span><span class="p">.</span><span class="n">len</span><span class="p">(</span><span class="n">paragraphs</span><span class="p">))</span>
+</pre></div>
+</div>
 </div>
 </div>
 
@@ -52,10 +70,10 @@
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="index.html">Tabla de Contenidos</a></h3>
+  <h3><a href="index.html">Table Of Contents</a></h3>
   <ul>
 <li><a class="reference internal" href="#">Writer</a><ul>
-<li><a class="reference internal" href="#text">Text</a></li>
+<li><a class="reference internal" href="#paragraphs">Paragraphs</a></li>
 </ul>
 </li>
 </ul>
@@ -63,28 +81,28 @@
 <h3>Related Topics</h3>
 <ul>
   <li><a href="index.html">Documentation overview</a><ul>
-      <li>Previous: <a href="libocalc.html" title="capítulo anterior">Calc</a></li>
-      <li>Next: <a href="libobase.html" title="próximo capítulo">Data Base</a></li>
+      <li>Previous: <a href="libocalc.html" title="previous chapter">Calc</a></li>
+      <li>Next: <a href="libobase.html" title="next chapter">Data Base</a></li>
   </ul></li>
 </ul>
 </div>
   <div role="note" aria-label="source link">
-    <h3>Esta página</h3>
+    <h3>This Page</h3>
     <ul class="this-page-menu">
       <li><a href="_sources/libowriter.txt"
-            rel="nofollow">Mostrar el código</a></li>
+            rel="nofollow">Show Source</a></li>
     </ul>
    </div>
 <div id="searchbox" style="display: none" role="search">
-  <h3>Búsqueda rápida</h3>
+  <h3>Quick search</h3>
     <form class="search" action="search.html" method="get">
       <input type="text" name="q" />
-      <input type="submit" value="Ir a" />
+      <input type="submit" value="Go" />
       <input type="hidden" name="check_keywords" value="yes" />
       <input type="hidden" name="area" value="default" />
     </form>
     <p class="searchtip" style="font-size: 90%">
-    Introduzca los términos de búsqueda o un nombre de módulo, clase o función.
+    Enter search terms or a module, class or function name.
     </p>
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script>
